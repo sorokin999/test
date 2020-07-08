@@ -1,0 +1,4 @@
+Запросы к базе
+1) SELECT kod_hosp,COUNT(*) AS sum FROM `service` GROUP BY kod_hosp HAVING sum>1
+2) SELECT kod_patient,COUNT(DISTINCT(kod_hosp)) AS sum FROM `service` GROUP BY kod_patient HAVING sum>=2
+3) SELECT kod_hosp,COUNT(*) AS sum FROM `service` GROUP BY kod_hosp ORDER BY sum DESC LIMIT 1
